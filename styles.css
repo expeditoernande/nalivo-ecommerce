@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 4.8rem;
+    font-family: "Cinzel Decorative", serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 9999;
+}
+
+.hamburger-login {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+
+.login-text {
+    position: relative;
+    font-size: 1.4rem;
+    transition: .3s;
+}
+
+.login-text:hover {
+    transform: scale(1.05)
+}
+
+
+.title-web{
+    font-size: 2rem;
+}
+
+.ul-web {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.16rem;
+}
+
+.list-web {
+    position: relative;
+}
+
+.list-web::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 60%;
+    height: 1px;
+    background-color: rgb(255, 255, 255); 
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.list-web:hover::after {
+    transform: scaleX(1);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    display: none !important;
+}
+
+.ul-web.ativo {
+    opacity: 1;
+    max-height: 500px;
+    }
+
+/* main */
+
+main {
+    margin-top: 4.5rem;
+}
+
+/* main-promo */
+
+.main-promo {
+    width: 100vw;
+    height: 5rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    font-family: "Baskervville SC", serif;
+}
+
+.main-promo h1 {
+    color: black;
+}
+
+.aspas {
+    font-size: 1.73rem;
+    color: rgb(7, 94, 125);
+}
+
+.welcome {
+    color: black;
+}
+/* main-promo */
+
+/* main-big-image */
+
+.main-big-image {
+    height: 35rem;
+    width: 100vw; 
+    background-image: url(assets/big-image-main.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* main-big-image */
+
+/* Big Text Products */
+
+.main-text-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    max-width: 100%;
+}
+
+.main-text-products h1{
+    font-family: "Cinzel Decorative", serif;
+    font-size: auto;
+}
+
+
+/* cards */
+
+.main-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;    
+}
+
+.card img{
+    width: 20vw;
+    transition: .6s;
+}
+
+.card img:hover{
+    transform: scale(1.05)
+}
+
+.card-texts h1 {
+    font-size: 1.7vw;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.card {
+    position: relative;
+}
+
+.preço {
+    padding-top: 0.5rem;
+    font-size: 1.8vw;
+}
+
+.card-texts {
+    margin-top: 1.5rem;
+    font-size: 5vw;
+}
+
+.card {
+    height: auto;
+    margin: 5rem 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: auto;
+    box-shadow: 0px 0px 10px 1px rgba(255,255,255,1);
+    transition: 1s;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.165);
+}
+
+/* sign in */
+
+.sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    gap: 10vw;
+}
+
+.sign-in h1 {
+    font-size: 2.1vw;
+    font-family: "Cinzel Decorative", serif;
+    text-wrap: nowrap;
+}
+
+.sign-in p {
+    font-size: 1.3vw;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.input-email {
+    font-size: 1.0rem;
+    width: 25vw;
+    padding: 5px 14px;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.email-enviar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.email-enviar a {
+    text-decoration: underline;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.envio-pagamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    height: 3vw;
+    background-color: rgb(0, 0, 0);
+    text-wrap: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.187);
+}
+
+.pagamento {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 0.9rem;
+}
+
+.icones-pagamento img {
+    width: 2rem;
+}
+
+.icones-pagamento {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.rights {
+    display: flex;
+    align-items: center;
+    padding: 0.5vw 2.8vw;
+    font-size: 0.8rem;
+    font-family: "Cinzel Decorative", serif;
+}
+
+
+
+@media (max-width: 840px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 0 10vw;
+    }
+
+
+    header ul {
+        position: absolute;
+        top: 77px;
+        left: 0;
+        right: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        opacity: 0;
+        max-height: 0;
+        transition: opacity .3s, max-height .5s;
+    }
+    
+    .ul-web {
+        padding-top: 0.9rem;
+        padding-bottom: 1.3rem;
+        gap: 4rem;
+    }
+    
+    .material-symbols-outlined {
+        cursor: pointer;
+        display: block !important;
+    }
+
+    /* main */
+
+    .main-promo {
+        text-wrap: nowrap;
+        font-size: 0.7rem;
+    }
+
+    .aspas {
+        font-size: 1.7rem;
+    }
+
+    main {
+        margin-top: 4.3rem;
+    }
+
+    /* main-big-image */
+    .main-big-image {
+        height: 30rem;
+    }
+
+    /* products */
+
+    .main-text-products {
+        margin: 2rem 0;
+    }
+
+    .main-cards {
+         flex-direction: column;   
+    }
+    
+    .card img{
+         width: 50vw;
+    }
+    
+    .card {
+        margin: 0rem 4rem;
+        margin-bottom: 2.4rem;
+        margin-top: 0.5rem;
+        padding: 2rem 1rem;
+    }
+    
+    .card-texts {
+        margin-top: 1.5rem;
+        font-size: 15vw;
+    }
+
+    .card-texts h1 {
+        font-size: 3.5vw;
+    }
+    
+    .preço {
+        padding-top: 0.5rem;
+        font-size: 4vw;
+    }
+    
+    .card-texts {
+        margin-top: 1.5rem;
+        font-size: 4vw;
+    }
+    
+     
+    .sign-in {
+        flex-direction: column;
+        height: auto;
+        gap: 4vw;
+        padding: 1.5rem 0;
+    }
+
+    .sign-in h1 {
+        font-size: 4.7vw;
+    }
+
+    .email-enviar {
+        flex-direction: column;
+    }
+
+    .email-enviar a {
+        font-size: 3.9vw;
+    }
+
+    .sign-in p {
+        font-size: 3vw;
+    }
+
+    .input-email {
+        width: 60vw;
+        font-size: 2.5vw;
+    }
+    
+    .envio-pagamento {
+            height: auto;
+            flex-direction: column;
+            gap: 3vw;
+            padding: 2vw 0;
+    }
+
+    .pagamento {
+        gap: 1vw;
+        flex-direction: column;
+    }
+
+    .icones-pagamento img {
+        width: 1.2rem;
+    }
+
+    .rights {
+        display: flex;
+        font-size: 0.6rem;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 501px) {
+    .main-promo {
+        text-wrap: nowrap;
+        font-size: 0.5rem;
+        height: 2.6rem;
+    }
+
+    .aspas {
+        font-size: 1.1rem;
+    }
+
+    main {
+        margin-top: 4.5rem;
+    }
+
+    .main-promo {
+        text-wrap: wrap;
+        text-align: center;
+    }
+}
