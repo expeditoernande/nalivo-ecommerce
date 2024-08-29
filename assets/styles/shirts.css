@@ -321,7 +321,7 @@ footer {
 
     
     .shirt-and-infos img {
-        width: 18rem;
+        width: 26vh;
         height: auto;
         margin: 0;
     }
@@ -402,5 +402,11 @@ footer {
         font-size: 1.2rem;
         margin-top: 0rem;
         padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 840px) {
+    main {
+        margin-top: 2rem;
     }
 }
