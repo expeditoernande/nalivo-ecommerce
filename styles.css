@@ -146,7 +146,7 @@ main {
 .main-big-image {
     height: 35rem;
     width: 100vw; 
-    background-image: url(/assets/big-image-main.jpeg);
+    background-image: url(assets/big-image-main.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
