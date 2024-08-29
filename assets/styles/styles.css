@@ -23,6 +23,18 @@ a {
     text-decoration: none;
 }
 
+.degrade {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.8s ease-out;
+}
+
+.degrade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 header {
     top: 0;
     position: fixed;
@@ -134,7 +146,7 @@ main {
 .main-big-image {
     height: 35rem;
     width: 100vw; 
-    background-image: url(assets/big-image-main.jpeg);
+    background-image: url(/assets/big-image-main.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,6 +163,10 @@ main {
     font-size: 2rem;
     margin-top: 4rem;
     max-width: 100%;
+}
+
+#produtos {
+    scroll-margin-top: 130px;
 }
 
 .main-text-products h1{
@@ -312,7 +328,7 @@ main {
 
     header ul {
         position: absolute;
-        top: 77px;
+        top: 75px;
         left: 0;
         right: 0;
         padding: 0;
@@ -325,9 +341,17 @@ main {
     }
     
     .ul-web {
-        padding-top: 0.9rem;
-        padding-bottom: 1.3rem;
-        gap: 4rem;
+        position: absolute;
+        top: -30rem;
+    }
+
+    .ul-web.ativo {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        height: 15rem;
+        z-index: 999;
+        top: 4.84rem;
     }
     
     .material-symbols-outlined {
@@ -395,6 +419,9 @@ main {
         font-size: 4vw;
     }
     
+    #produtos {
+        scroll-margin-top: 100px;
+    }
      
     .sign-in {
         flex-direction: column;

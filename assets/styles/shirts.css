@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.degrade {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.8s ease-out;
+}
+
+.degrade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    height: 4.8rem;
+    font-family: "Cinzel Decorative", serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 9999;
+}
+
+.hamburger-login {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+
+.login-text {
+    position: relative;
+    font-size: 1.4rem;
+    transition: .3s;
+}
+
+.login-text:hover {
+    transform: scale(1.05)
+}
+
+
+.title-web{
+    font-size: 2rem;
+}
+
+.ul-web {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.16rem;
+}
+
+.list-web {
+    position: relative;
+}
+
+.list-web::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 60%;
+    height: 1px;
+    background-color: rgb(255, 255, 255); 
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.list-web:hover::after {
+    transform: scaleX(1);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    display: none !important;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cinzel Decorative", serif;
+    margin: 0rem 0;
+}
+
+.shirt-and-infos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.web-img {
+    display: flex;
+    width: 30%;
+    height: auto;
+    margin-right: 5rem;
+}
+
+.mob-img {
+    display: none;
+}
+
+.shirt-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.shirt-specs {
+    font-size: 1vw;
+}
+
+.inicio-camiseta {
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.inicio-camiseta p {
+    font-size: 1vw;
+}
+
+.shirt-name {
+    font-size: 1.9vw;
+}
+
+.shirt-size {
+    font-size: 1.5vw;
+}
+
+.shirt-price {
+    font-size: 1.9vw;
+}
+
+.inicio-camiseta h1 {
+    font-size: 1vw;
+}
+
+.buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.3vw;
+    color: rgb(0, 0, 0);
+    padding: 5px 0px;
+    width: 24.8vw;
+    transition: .5s;
+    border-radius: none;
+    background-color: white;
+    }
+    
+.buy-button:hover{
+    background-color: rgb(0, 0, 0);
+    border: solid white 1px;
+    color: rgb(255, 255, 255);
+}
+
+.description {
+    font-size: 1.4vw;
+    margin-top: 0.6rem;
+    padding: 0.1rem 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.envio-pagamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    height: 3vw;
+    background-color: rgb(0, 0, 0);
+    text-wrap: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.187);
+}
+
+.pagamento {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 0.9rem;
+}
+
+.icones-pagamento img {
+    width: 2rem;
+}
+
+.icones-pagamento {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.rights {
+    display: flex;
+    align-items: center;
+    padding: 0.5vw 2.8vw;
+    font-size: 0.8rem;
+    font-family: "Cinzel Decorative", serif;
+}
+
+@media (max-width: 840px) {
+
+    body {
+        overflow-x: hidden;
+        }
+    
+    header {
+        justify-content: space-between;
+        padding: 0 10vw;
+        }
+    
+    .ul-web {
+        position: absolute;
+        top: -30rem;
+    }
+
+    .ul-web.ativo {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        max-height: 500px;
+        z-index: 999;
+        top: 5rem;
+        }
+
+    header ul {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        opacity: 0;
+        max-height: 0;
+        transition: opacity .3s, max-height .5s;
+        }
+        
+    .ul-web {
+        padding-top: 0.9rem;
+        padding-bottom: 1.3rem;
+        gap: 4rem;
+        z-index: -100;
+        }
+        
+    .material-symbols-outlined {
+        cursor: pointer;
+        display: block !important;
+        z-index: 1000;
+        }
+
+        .envio-pagamento {
+            height: auto;
+            flex-direction: column;
+            gap: 3vw;
+            padding: 2vw 0;
+    }
+
+    .pagamento {
+        gap: 1vw;
+        flex-direction: column;
+    }
+
+    .icones-pagamento img {
+        width: 1.2rem;
+    }
+
+    .rights {
+        display: flex;
+        font-size: 0.6rem;
+        justify-content: center;
+    }
+
+
+    main {
+        flex-direction: column;
+        
+    }
+    
+    .shirt-and-infos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    
+    .shirt-and-infos img {
+        width: 18rem;
+        height: auto;
+        margin: 0;
+    }
+
+    .mob-img {
+        display: flex;
+        width: 30%;
+        height: auto;
+    }
+
+    .web-img {
+        display: none;
+        width: 30%;
+        height: auto;
+        margin-right: 0rem;
+    }
+    
+    .shirt-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .shirt-specs {
+        font-size: 0.7rem;
+    }
+    
+    .inicio-camiseta {
+        display: flex;
+        align-items: center;
+        gap: 0.4vw;
+        padding-top: 1rem;
+    }
+    
+    .inicio-camiseta p {
+        font-size: 0.7rem;
+    }
+
+    .inicio-camiseta h1 {
+        font-size: 0.7rem;
+    }
+    
+    .shirt-name {
+        font-size: 1.25rem;
+    }
+    
+    .shirt-price {
+        font-size: 1.4rem;
+    }
+
+    .shirt-size {
+        font-size: 1.2rem;
+    }
+    
+    .buy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: "Cinzel Decorative", serif;
+        font-size: 1rem;
+        color: rgb(0, 0, 0);
+        padding: 5px 0px;
+        width: 15rem;
+        transition: .5s;
+        border-radius: none;
+        background-color: white;
+        }
+        
+    .buy-button:hover{
+        background-color: rgb(0, 0, 0);
+        border: solid white 1px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        margin-top: 0rem;
+        padding: 0.2rem 0;
+    }
+}
